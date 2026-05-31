@@ -5,27 +5,7 @@ import ServiceCard from './components/ServiceCard'
 import ContactForm from './components/ContactForm'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
 import FaqAccordion from './components/FaqAccordion'
-
-const servicios = [
-  {
-    id: 1,
-    titulo: 'Asesoría empresarial',
-    descripcion: 'Acompañamiento para mejorar la gestión, administración y toma de decisiones en emprendedores y pymes.',
-    imagen: '/icons.svg',
-  },
-  {
-    id: 2,
-    titulo: 'Capacitaciones y talleres',
-    descripcion: 'Actividades formativas enfocadas en fortalecer habilidades comerciales, financieras y digitales.',
-    imagen: '/icons.svg',
-  },
-  {
-    id: 3,
-    titulo: 'Innovación y transformación digital',
-    descripcion: 'Orientación para incorporar herramientas digitales, optimizar procesos y mejorar la competitividad.',
-    imagen: '/icons.svg',
-  },
-]
+import { servicios } from './data/servicios'
 
 function App() {
   const [servicioSeleccionado, setServicioSeleccionado] = useState('')
@@ -88,7 +68,7 @@ function App() {
         </section>
 
         <TestimonialsCarousel />
-        
+
         <FaqAccordion />
 
         <section id="contacto" className="py-5 bg-light">
