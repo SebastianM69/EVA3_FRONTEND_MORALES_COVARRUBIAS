@@ -11,22 +11,22 @@ Este documento registra las pruebas realizadas a la API local simulada con `json
 
 La API permite consumir información para las siguientes secciones:
 
-* Nosotros
-* Servicios
-* Testimonios
-* Preguntas frecuentes
+- Nosotros
+- Servicios
+- Testimonios
+- Preguntas frecuentes
 
 ## Herramienta utilizada
 
 Para simular la API local se utilizó:
 
-```bash
+```
 json-server
 ```
 
 El servidor se ejecuta en el puerto:
 
-```text
+```
 http://localhost:3001
 ```
 
@@ -34,13 +34,13 @@ http://localhost:3001
 
 Desde la raíz del proyecto se debe ejecutar:
 
-```powershell
+```
 npm run api
 ```
 
 Resultado esperado:
 
-```text
+```
 JSON Server started
 http://localhost:3001
 ```
@@ -58,13 +58,13 @@ http://localhost:3001
 
 ### Prueba en PowerShell
 
-```powershell
+```
 Invoke-RestMethod http://localhost:3001/servicios
 ```
 
 ### Resultado esperado
 
-```text
+```
 Debe mostrar 3 servicios:
 1. Asesoria empresarial
 2. Capacitaciones y talleres
@@ -84,13 +84,13 @@ Debe mostrar 3 servicios:
 
 ### Prueba en PowerShell
 
-```powershell
+```
 Invoke-RestMethod http://localhost:3001/nosotros
 ```
 
 ### Resultado esperado
 
-```text
+```
 Debe mostrar:
 - etiqueta
 - titulo
@@ -113,13 +113,13 @@ Debe mostrar:
 
 ### Prueba en PowerShell
 
-```powershell
+```
 Invoke-RestMethod http://localhost:3001/testimonios
 ```
 
 ### Resultado esperado
 
-```text
+```
 Debe mostrar 3 testimonios:
 1. Carolina Munoz
 2. Felipe Araya
@@ -139,13 +139,13 @@ Debe mostrar 3 testimonios:
 
 ### Prueba en PowerShell
 
-```powershell
+```
 Invoke-RestMethod http://localhost:3001/preguntasFrecuentes
 ```
 
 ### Resultado esperado
 
-```text
+```
 Debe mostrar 4 preguntas frecuentes relacionadas con:
 1. Usuarios que pueden recibir apoyo
 2. Servicios entregados
@@ -161,19 +161,19 @@ Para verificar que la landing page consume correctamente la API local, se deben 
 
 ### Terminal 1
 
-```powershell
+```
 npm run api
 ```
 
 ### Terminal 2
 
-```powershell
+```
 npm run dev
 ```
 
 Luego abrir en el navegador:
 
-```text
+```
 http://localhost:5173/
 ```
 
@@ -181,11 +181,11 @@ http://localhost:5173/
 
 La página debe cargar correctamente las siguientes secciones:
 
-* Nosotros
-* Servicios principales
-* Testimonios
-* Preguntas frecuentes
-* Contacto
+- Nosotros
+- Servicios principales
+- Testimonios
+- Preguntas frecuentes
+- Contacto
 
 Además, los botones de servicios deben llevar al formulario de contacto y rellenar automáticamente el campo de servicio seleccionado.
 
@@ -193,7 +193,7 @@ Además, los botones de servicios deben llevar al formulario de contacto y relle
 
 Durante la prueba se ejecutaron correctamente los siguientes comandos:
 
-```powershell
+```
 Invoke-RestMethod http://localhost:3001/servicios
 Invoke-RestMethod http://localhost:3001/nosotros
 Invoke-RestMethod http://localhost:3001/testimonios
