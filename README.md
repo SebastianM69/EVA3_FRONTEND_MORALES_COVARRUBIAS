@@ -464,5 +464,5 @@ git status
 Repositorio del proyecto:
 
 ```text
-Pendiente de agregar URL del repositorio GitHub.
+https://github.com/SebastianM69/EVA3_FRONTEND_MORALES_COVARRUBIAS.git
 ```
