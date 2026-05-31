@@ -1,0 +1,77 @@
+{
+  "nosotros": {
+    "etiqueta": "Nosotros",
+    "titulo": "Centro de Negocios Santiago",
+    "descripcion": "El Centro de Negocios Santiago de SERCOTEC entrega apoyo, asesoria y acompanamiento a emprendedores, microempresas y pequenas empresas, fortaleciendo su gestion y crecimiento.",
+    "objetivoTitulo": "Objetivo de la landing page",
+    "objetivoDescripcion": "Difundir los servicios disponibles, facilitar el contacto con usuarios interesados y mejorar la experiencia de navegacion mediante una landing page clara, moderna y responsive.",
+    "areas": [
+      "Gestion y administracion",
+      "Innovacion",
+      "Transformacion digital",
+      "Sostenibilidad"
+    ]
+  },
+  "servicios": [
+    {
+      "id": 1,
+      "titulo": "Asesoria empresarial",
+      "descripcion": "Acompanamiento para mejorar la gestion, administracion y toma de decisiones en emprendedores y pymes.",
+      "imagen": "/icons.svg"
+    },
+    {
+      "id": 2,
+      "titulo": "Capacitaciones y talleres",
+      "descripcion": "Actividades formativas enfocadas en fortalecer habilidades comerciales, financieras y digitales.",
+      "imagen": "/icons.svg"
+    },
+    {
+      "id": 3,
+      "titulo": "Innovacion y transformacion digital",
+      "descripcion": "Orientacion para incorporar herramientas digitales, optimizar procesos y mejorar la competitividad.",
+      "imagen": "/icons.svg"
+    }
+  ],
+  "testimonios": [
+    {
+      "id": 1,
+      "nombre": "Carolina Munoz",
+      "cargo": "Emprendedora local",
+      "texto": "El acompanamiento del Centro de Negocios me ayudo a ordenar mi idea de negocio y mejorar la forma en que presento mis servicios."
+    },
+    {
+      "id": 2,
+      "nombre": "Felipe Araya",
+      "cargo": "Dueno de pyme",
+      "texto": "Las asesorias permitieron mejorar nuestra gestion interna y tomar mejores decisiones comerciales."
+    },
+    {
+      "id": 3,
+      "nombre": "Marcela Rojas",
+      "cargo": "Microempresaria",
+      "texto": "Los talleres fueron claros, practicos y aplicables a la realidad de mi emprendimiento."
+    }
+  ],
+  "preguntasFrecuentes": [
+    {
+      "id": 1,
+      "pregunta": "Quienes pueden recibir apoyo del Centro de Negocios Santiago?",
+      "respuesta": "Pueden acceder emprendedores, microempresas y pequenas empresas que necesiten orientacion para mejorar su gestion, fortalecer sus capacidades o desarrollar su negocio."
+    },
+    {
+      "id": 2,
+      "pregunta": "Que tipo de servicios entrega el Centro de Negocios?",
+      "respuesta": "Entrega asesorias, capacitaciones, acompanamiento empresarial, orientacion en innovacion, transformacion digital, administracion, finanzas y marketing."
+    },
+    {
+      "id": 3,
+      "pregunta": "Como puedo solicitar informacion sobre un servicio?",
+      "respuesta": "Puedes seleccionar una tarjeta de servicio y presionar el boton Contactanos. El formulario completara automaticamente el servicio seleccionado."
+    },
+    {
+      "id": 4,
+      "pregunta": "La atencion es presencial o digital?",
+      "respuesta": "La landing page permite entregar informacion inicial y facilitar el contacto. La modalidad final de atencion dependera de la coordinacion del Centro de Negocios Santiago."
+    }
+  ]
+}
