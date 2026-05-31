@@ -1,47 +1,61 @@
-import { preguntasFrecuentes } from '../data/preguntasFrecuentes'
+import { useEffect, useState } from 'react'
+import { obtenerPreguntasFrecuentes } from '../services/api'
 
 function FaqAccordion() {
+  const [preguntasFrecuentes, setPreguntasFrecuentes] = useState([])
+  const [cargando, setCargando] = useState(true)
+
+  useEffect(() => {
+    obtenerPreguntasFrecuentes()
+      .then((datos) => {
+        setPreguntasFrecuentes(datos)
+      })
+      .catch((error) => {
+        console.error('Error al obtener las preguntas frecuentes:', error)
+      })
+      .finally(() => {
+        setCargando(false)
+      })
+  }, [])
+
+  if (cargando) {
+    return (
+      <p className="text-center">
+        Cargando preguntas frecuentes...
+      </p>
+    )
+  }
+
   return (
-    <section id="faq" className="py-5">
-      <div className="container">
-        <div className="text-center mb-4">
-          <span className="badge bg-primary mb-3">FAQ</span>
-          <h2 className="fw-bold">Preguntas frecuentes</h2>
-          <p className="text-muted mb-0">
-            Respuestas a dudas comunes sobre los servicios y el contacto con el Centro de Negocios.
-          </p>
-        </div>
+    <div className="accordion" id="accordionPreguntasFrecuentes">
+      {preguntasFrecuentes.map((pregunta, index) => (
+        <div className="accordion-item" key={pregunta.id}>
+          <h3 className="accordion-header" id={`heading-${pregunta.id}`}>
+            <button
+              className={`accordion-button ${index !== 0 ? 'collapsed' : ''}`}
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#collapse-${pregunta.id}`}
+              aria-expanded={index === 0 ? 'true' : 'false'}
+              aria-controls={`collapse-${pregunta.id}`}
+            >
+              {pregunta.pregunta}
+            </button>
+          </h3>
 
-        <div className="accordion" id="accordionFaq">
-          {preguntasFrecuentes.map((item, index) => (
-            <div className="accordion-item" key={item.id}>
-              <h3 className="accordion-header">
-                <button
-                  className={`accordion-button ${index !== 0 ? 'collapsed' : ''}`}
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target={`#faq${item.id}`}
-                  aria-expanded={index === 0 ? 'true' : 'false'}
-                  aria-controls={`faq${item.id}`}
-                >
-                  {item.pregunta}
-                </button>
-              </h3>
-
-              <div
-                id={`faq${item.id}`}
-                className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                data-bs-parent="#accordionFaq"
-              >
-                <div className="accordion-body">
-                  {item.respuesta}
-                </div>
-              </div>
+          <div
+            id={`collapse-${pregunta.id}`}
+            className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+            aria-labelledby={`heading-${pregunta.id}`}
+            data-bs-parent="#accordionPreguntasFrecuentes"
+          >
+            <div className="accordion-body">
+              {pregunta.respuesta}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   )
 }
 
