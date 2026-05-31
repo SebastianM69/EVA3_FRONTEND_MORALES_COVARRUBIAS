@@ -62,9 +62,9 @@ function TestimonialsCarousel() {
                   key={testimonio.id}
                 >
                   <div className="card border-0 shadow-sm text-center mx-auto testimonial-card">
-                    <div className="card-body p-4">
-                      <p className="card-text fst-italic">
-                        “{testimonio.mensaje}”
+                    <div className="card-body p-4 p-md-5">
+                      <p className="card-text fst-italic testimonial-text">
+                        “{testimonio.texto}”
                       </p>
 
                       <h3 className="h5 mt-4 mb-1">
