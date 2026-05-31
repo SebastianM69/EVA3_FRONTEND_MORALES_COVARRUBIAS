@@ -216,7 +216,7 @@ La página mejora su accesibilidad y navegación asistida.
 
 ---
 
-## 9. Diseño responsive con Bootstrap
+## 9. Diseño responsivo con Bootstrap
 
 ### Descripción
 
