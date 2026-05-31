@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import ServiceCard from './components/ServiceCard'
 import ContactForm from './components/ContactForm'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
+import FaqAccordion from './components/FaqAccordion'
 
 const servicios = [
   {
@@ -88,6 +89,8 @@ function App() {
 
         <TestimonialsCarousel />
         
+        <FaqAccordion />
+
         <section id="contacto" className="py-5 bg-light">
           <div className="container">
             <div className="text-center mb-4">
