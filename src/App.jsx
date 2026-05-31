@@ -1,15 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ServiceCard from './components/ServiceCard'
 import ContactForm from './components/ContactForm'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
 import FaqAccordion from './components/FaqAccordion'
-import { servicios } from './data/servicios'
+import { obtenerServicios } from './services/api'
 
 function App() {
   const [servicioSeleccionado, setServicioSeleccionado] = useState('')
+  const [servicios, setServicios] = useState([])
+  const [cargandoServicios, setCargandoServicios] = useState(true)
 
+  useEffect(() => {
+    async function cargarServicios() {
+      const datosServicios = await obtenerServicios()
+      setServicios(datosServicios)
+      setCargandoServicios(false)
+    }
+
+    cargarServicios()
+  }, [])
   return (
     <>
       <Navbar />
@@ -52,18 +63,24 @@ function App() {
               Selecciona un servicio para solicitar más información mediante el formulario de contacto.
             </p>
 
-            <div className="row g-4">
-              {servicios.map((servicio) => (
-                <div className="col-md-6 col-lg-4" key={servicio.id}>
-                  <ServiceCard
-                    imagen={servicio.imagen}
-                    titulo={servicio.titulo}
-                    descripcion={servicio.descripcion}
-                    onSelectServicio={setServicioSeleccionado}
-                  />
-                </div>
-              ))}
-            </div>
+{cargandoServicios ? (
+  <div className="alert alert-info text-center">
+    Cargando servicios disponibles...
+  </div>
+) : (
+  <div className="row g-4">
+    {servicios.map((servicio) => (
+      <div className="col-md-6 col-lg-4" key={servicio.id}>
+        <ServiceCard
+          imagen={servicio.imagen}
+          titulo={servicio.titulo}
+          descripcion={servicio.descripcion}
+          onSelectServicio={setServicioSeleccionado}
+        />
+      </div>
+    ))}
+  </div>
+)}
           </div>
         </section>
 
