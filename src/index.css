@@ -42,3 +42,12 @@ section {
   padding: 2rem;
   background-color: #f8fafc;
 }
+
+.testimonial-card {
+  min-height: 260px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+}
