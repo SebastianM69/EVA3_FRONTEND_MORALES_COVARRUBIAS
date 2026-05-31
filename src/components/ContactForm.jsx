@@ -65,7 +65,7 @@ function ContactForm({ servicioSeleccionado }) {
     }
 
     setError('')
-    setExito('Formulario validado correctamente. En una siguiente etapa se conectará con una API o CMS.')
+    setExito('Formulario validado correctamente. ¡Gracias por contactarnos!')
 
     setFormData({
       nombre: '',
