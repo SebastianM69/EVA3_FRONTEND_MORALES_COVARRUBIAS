@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ServiceCard from './components/ServiceCard'
+import ContactForm from './components/ContactForm'
 
 const servicios = [
   {
@@ -85,14 +86,18 @@ function App() {
         </section>
 
         <section id="contacto" className="py-5 bg-light">
-          <div className="container text-center">
-            <h2 className="fw-bold">Contacto</h2>
-            <p className="text-muted">
-              Servicio seleccionado:
-            </p>
+          <div className="container">
+            <div className="text-center mb-4">
+              <h2 className="fw-bold">Contacto</h2>
+              <p className="text-muted">
+                Completa el formulario para solicitar información sobre los servicios del Centro de Negocios Santiago.
+              </p>
+            </div>
 
-            <div className="alert alert-primary">
-              {servicioSeleccionado || 'Aún no se ha seleccionado un servicio.'}
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <ContactForm servicioSeleccionado={servicioSeleccionado} />
+              </div>
             </div>
           </div>
         </section>
