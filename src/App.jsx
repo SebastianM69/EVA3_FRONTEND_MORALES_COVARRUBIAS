@@ -6,6 +6,7 @@ import ServiceCard from './components/ServiceCard'
 import ContactForm from './components/ContactForm'
 import TestimonialsCarousel from './components/TestimonialsCarousel'
 import FaqAccordion from './components/FaqAccordion'
+import Footer from './components/Footer'
 import { obtenerServicios } from './services/api'
 
 function App() {
@@ -87,6 +88,8 @@ function App() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   )
 }
