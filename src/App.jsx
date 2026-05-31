@@ -1,121 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <main>
+      <section className="hero-sercotec d-flex align-items-center">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-7">
+              <span className="badge bg-warning text-dark mb-3">
+                Centro de Negocios Santiago
+              </span>
+
+              <h1 className="display-4 fw-bold text-white">
+                Apoyo y acompañamiento para emprendedores y pymes
+              </h1>
+
+              <p className="lead text-white mt-3">
+                Plataforma informativa para difundir servicios de asesoría,
+                capacitación, innovación y fortalecimiento empresarial.
+              </p>
+
+              <div className="d-flex gap-3 mt-4 flex-wrap">
+                <a href="#servicios" className="btn btn-warning btn-lg">
+                  Ver servicios
+                </a>
+
+                <a href="#contacto" className="btn btn-outline-light btn-lg">
+                  Contáctanos
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+      </section>
+
+      <section id="servicios" className="py-5">
+        <div className="container">
+          <h2 className="fw-bold text-center mb-3">Servicios principales</h2>
+          <p className="text-center text-muted mb-5">
+            Esta sección será reemplazada por componentes reutilizables en el siguiente paso.
+          </p>
+
+          <div className="alert alert-info text-center">
+            Proyecto React funcionando correctamente con Bootstrap.
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" className="py-5 bg-light">
+        <div className="container text-center">
+          <h2 className="fw-bold">Contacto</h2>
+          <p className="text-muted">
+            En los próximos pasos agregaremos el formulario funcional.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    </main>
   )
 }
 
